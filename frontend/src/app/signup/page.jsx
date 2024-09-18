@@ -7,7 +7,7 @@ const page = () => {
     <div>
   <>
   {/* Hero */}
-  <div className="relative bg-gradient-to-bl from-blue-100 via-transparent">
+  <div className="relative bg-black bg-gradient-to-bl via-transparent">
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       {/* Grid */}
       <div className="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
@@ -17,10 +17,10 @@ const page = () => {
           </p> */}
           {/* Title */}
           <div className="mt-3 md:mb-12 max-w-2xl">
-            <h1 className="mb-4 font-semibold text-gray-800 text-4xl lg:text-5xl">
-              Fully customizable rules to match your unique needs
+            <h1 className="mb-4 font-semibold text-white text-4xl lg:text-5xl">
+              Fully customizable rules to match your<span class="text-blue-600 dark:text-blue-500"> unique needs</span>
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-400">
              Explore our user-friendly directory to find the perfect library to take your skills to the next level.
             </p>
           </div>
@@ -28,7 +28,7 @@ const page = () => {
           {/* Blockquote */}
           <blockquote className="hidden md:block relative max-w-sm">
             <svg
-              className="absolute top-0 start-0 transform -translate-x-6 -translate-y-8 size-16 text-gray-200"
+              className="absolute top-0 start-0 transform -translate-x-6 -translate-y-8 size-16 text-gray-400"
               width={16}
               height={16}
               viewBox="0 0 16 16"
@@ -42,7 +42,7 @@ const page = () => {
               />
             </svg>
             <div className="relative z-10">
-              <p className="text-xl italic text-gray-800">
+              <p className="text-xl italic text-white">
                 Amazing people to work with. Very fast and professional partner.
               </p>
             </div>
@@ -56,7 +56,7 @@ const page = () => {
                   />
                 </div>
                 <div className="grow">
-                  <div className="font-semibold text-gray-800">
+                  <div className="font-semibold text-white">
                     Josh Grazioso
                   </div>
                   <div className="text-xs text-gray-500">
@@ -77,7 +77,7 @@ const page = () => {
               <div className="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg">
                 <div className="text-center">
                   <h1 className="block text-2xl font-bold text-gray-800">
-                    Start your free trial
+                    Welcome to Library Hub
                   </h1>
                   <p className="mt-2 text-sm text-gray-600">
                     Already have an account?
@@ -194,7 +194,10 @@ const page = () => {
                     </div>
                     {/* End Input Group */}
                     {/* Input Group */}
-                    <div>
+                    
+                    {/* End Input Group */}
+                    {/* Input Group */}
+                    <div className="relative col-span-full">
                       {/* Floating Input */}
                       <div className="relative">
                         <input
@@ -228,40 +231,6 @@ const page = () => {
                     </div>
                     {/* End Input Group */}
                     {/* Input Group */}
-                    <div>
-                      {/* Floating Input */}
-                      <div className="relative">
-                        <input
-                          type="text"
-                          id="hs-hero-signup-form-floating-input-company-name"
-                          className="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
-                focus:pt-6
-                focus:pb-2
-                [&:not(:placeholder-shown)]:pt-6
-                [&:not(:placeholder-shown)]:pb-2
-                autofill:pt-6
-                autofill:pb-2"
-                          placeholder="Preline"
-                        />
-                        <label
-                          htmlFor="hs-hero-signup-form-floating-input-company-name"
-                          className="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                  peer-focus:scale-90
-                  peer-focus:translate-x-0.5
-                  peer-focus:-translate-y-1.5
-                  peer-focus:text-gray-500
-                  peer-[:not(:placeholder-shown)]:scale-90
-                  peer-[:not(:placeholder-shown)]:translate-x-0.5
-                  peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                  peer-[:not(:placeholder-shown)]:text-gray-500"
-                        >
-                          Company name
-                        </label>
-                      </div>
-                      {/* End Floating Input */}
-                    </div>
-                    {/* End Input Group */}
-                    {/* Input Group */}
                     <div className="relative col-span-full">
                       {/* Floating Input */}
                       <div className="relative">
@@ -289,7 +258,7 @@ const page = () => {
                   peer-[:not(:placeholder-shown)]:-translate-y-1.5
                   peer-[:not(:placeholder-shown)]:text-gray-500"
                         >
-                          New password
+                          Enter password
                         </label>
                       </div>
                       {/* End Floating Input */}
@@ -538,7 +507,7 @@ const page = () => {
                   peer-[:not(:placeholder-shown)]:-translate-y-1.5
                   peer-[:not(:placeholder-shown)]:text-gray-500"
                         >
-                          Current password
+                          Confirm password
                         </label>
                       </div>
                       {/* End Floating Input */}
