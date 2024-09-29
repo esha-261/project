@@ -99,7 +99,7 @@ const SignIn = () => {
     <img
       alt="image"
     //    src="https://www.unite.ai/wp-content/uploads/2022/04/AI-Python-Libraries.png"
-    src="https://images.unsplash.com/photo-1630450202872-e0829c9d6172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    src="https://i.pinimg.com/originals/aa/59/d1/aa59d139b93dde70ff207187c9f1d8bd.gif"
       className="absolute inset-0 md:h-full md:w-full object-cover rounded-lg"
     />
   </div>
