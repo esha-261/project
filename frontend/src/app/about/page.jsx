@@ -21,7 +21,7 @@ const page = () => {
                 {/* Title */}
                 <div className="space-y-2 md:space-y-4">
                   <h2 className="font-bold text-3xl lg:text-4xl text-white">
-                   Welcome to LibraryHUB
+                   Welcome to Library<span class="text-gray-400">HUB</span>
                   </h2>
                   <p className="text-gray-500">
                      Your one-stop destination for discovering a wide range of libraries across multiple programming languages and frameworks.

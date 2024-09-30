@@ -77,7 +77,7 @@ const page = () => {
               <div className="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg">
                 <div className="text-center">
                   <h1 className="block text-2xl font-bold text-gray-800">
-                    Welcome to Library Hub
+                    Welcome to <span class="text-gray-400">Library</span><span class="text-gray-600">HUB</span>
                   </h1>
                   <p className="mt-2 text-sm text-gray-600">
                     Already have an account?

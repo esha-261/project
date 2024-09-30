@@ -29,7 +29,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
               <label
                 htmlFor="af-submit-app-project-name"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Category
               </label>
@@ -43,7 +43,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
               <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Name
               </label>
@@ -57,7 +57,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Version
               </label>
@@ -72,7 +72,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Package_Name
               </label>
@@ -86,7 +86,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Tags
               </label>
@@ -100,7 +100,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Description
               </label>
@@ -114,7 +114,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Downloads
               </label>
@@ -128,7 +128,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Package_Name
               </label>
@@ -142,7 +142,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Updated
               </label>
@@ -156,7 +156,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Link
               </label>
@@ -170,7 +170,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 Language
               </label>
@@ -184,7 +184,7 @@ const AddLibrary = () => {
             <div className="space-y-2">
             <label
                 htmlFor="af-submit-project-url"
-                className="inline-block text-md font-bold text-gray-800 mt-0.5"
+                className="inline-block text-xl font-bold text-gray-800 mt-0.5"
               >
                 CreatedAt
               </label>
