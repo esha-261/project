@@ -1,6 +1,49 @@
+'use client'
 import React from 'react'
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
+
+
+const contactSchema=Yup.object().shape(
+    {
+        name: Yup.string()
+        .min(2, 'Name must be of atleast 2 character')
+        .max(50, 'Name must be atmost 50 character')
+        .required(50, 'Name is required'),
+
+        email: Yup.string()
+        .email('Please enter a valid email address')
+        .required('Email is required'),       
+        
+        phoneno: Yup.string()
+        .min(10,'no should be of 10 digits')
+        .max(10, 'Not more than 10 digits')
+        .matches(/[0-9]/, 'Digits should be there')
+        .required('phone no is required'),
+
+        message: Yup.string()
+        .required('write a message')
+    }
+)
 
 const ContactUs = () => {
+    const contactForm=useFormik(
+        {
+            initialValues:{
+                name:'',
+                email:'',
+                phoneno:'',
+                message: '',
+            },
+            onSubmit : (values,{resetForm})=>
+            {
+                console.log(values)
+                resetForm()
+            },
+           validationSchema :contactSchema
+        }
+    )
+
     return (
         <div>
             {/* Testimonial section */}
@@ -50,31 +93,47 @@ const ContactUs = () => {
                     <div className="mx-auto w-full sm:px-6 lg:px-8 ">
 
                         <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-                            <form action="#" className="space-y-4">
+                            <form  onSubmit={contactForm.handleSubmit} action="#" className="space-y-4">
                                 <div>
                                     <label className="sr-only" htmlFor="name"></label>
+                                    {contactForm.errors.name && contactForm.touched.name ? (
+                <div className='text-red-500 text-sm'>{contactForm.errors.name}</div>
+            ): null }
                                     <input
                                         className="w-full rounded-lg border border-gray-400 p-3 text-sm bg-white"
                                         placeholder="Name"
                                         type="text"
                                         id="name"
+                                        onChange={contactForm.handleChange} 
+                  value={contactForm.values.name}
                                     />
                                 </div>
                                 <div>
                                     <label className="sr-only" htmlFor="email">Email</label>
+                                    {contactForm.errors.email && contactForm.touched.email ?
+                (
+                    <div className='text-red-500 text-sm'>{contactForm.errors.email}</div>
+                ):null}
                                     <input
                                         className="w-full rounded-lg border border-gray-400 p-3 text-sm bg-white"
                                         placeholder="Email address"
                                         type="email"
                                         id="email"
+                                        onChange={contactForm.handleChange}
+                  value={contactForm.values.email}
                                     />
                                     <div>
-                                        <label className="sr-only" htmlFor="phone">Phone</label>
+                                        <label className="sr-only"htmlFor="phone">Phone</label>
+                                        {contactForm.errors.phoneno && contactForm.touched.phoneno ?
+                (<div className='text-red-500 text-sm'>{contactForm.errors.phoneno}</div>)
+              : null}
                                         <input
                                             className="w-full rounded-lg bg-white border border-gray-400 p-3 mt-4 text-sm"
                                             placeholder="Phone Number"
                                             type="tel"
-                                            id="phone"
+                                            id="phoneno"
+                                            onChange={contactForm.handleChange}
+                  value={contactForm.values.phoneno}
                                         />
                                     </div>
                                 </div>
@@ -82,19 +141,23 @@ const ContactUs = () => {
 
                                 <div>
                                     <label className="sr-only" htmlFor="message">Message</label>
-
+                                    {contactForm.errors.message && contactForm.touched.message ? 
+              (<div className='text-red-500 text-sm'>{contactForm.errors.message}</div>)
+              : null}
                                     <textarea
                                         className="w-full rounded-lg bg-white border border-gray-400 p-3 text-sm"
                                         placeholder="Message"
                                         rows="8"
                                         id="message"
+                                        onChange={contactForm.handleChange}
+                value={contactForm.values.message}
                                     ></textarea>
                                 </div>
 
                                 <div className="mt-4">
                                     <button
                                         type="submit"
-                                        className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
+                                        className="inline-block w-full rounded-lg bg-blue-500 px-5 py-3 font-medium text-white sm:w-auto"
                                     >
                                         Send Enquiry
                                     </button>
