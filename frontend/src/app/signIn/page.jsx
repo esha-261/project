@@ -1,6 +1,40 @@
+'use client'
 import React from 'react'
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
+const signInSchema=Yup.object().shape(
+  {
+    
+    email: Yup.string()
+    .email('Please enter a valid email address')
+    .required('Email is required'),       
+    
+    password : Yup.string()
+    .min(8, 'Password must be of 8 characters')
+    .matches(/[a-z]/, 'Password must contain atleast one lowrcase letter')
+    .matches(/[A-Z]/, 'Password must contain atleast one uppercase letter')
+    .matches(/[0-9]/, 'Password must contain atleast one number')
+    .matches(/[!@#$%^&*()+_=\[\]{};':"\\|,.<>\?]/, 'Paasword must contain one special character')
+    .required('Password is required'),
+  }
+)
 
 const SignIn = () => {
+  const signInForm=useFormik(
+    {
+        initialValues:{
+            email:'',
+            password:'',
+        },
+        onSubmit : (values,{resetForm})=>
+        {
+            console.log(values)
+            resetForm()
+        },
+       validationSchema :signInSchema
+    }
+)
   return (
     <div>
 
@@ -14,13 +48,18 @@ const SignIn = () => {
       </p>
     </div>
 
-    <form action="#" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
+    <form onSubmit={signInForm.handleSubmit} action="#" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
       <div>
         <label htmlFor="email" className="sr-only">Email</label>
-
+        {signInForm.errors.email && signInForm.touched.email ? (
+                <div className='text-red-500 text-sm'>{signInForm.errors.email}</div>
+            ): null }
         <div className="relative">
           <input
             type="email"
+            id="email"
+                  onChange={signInForm.handleChange}
+                  value={signInForm.values.email}
             className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
             placeholder="Enter email"
           />
@@ -46,10 +85,15 @@ const SignIn = () => {
 
       <div>
         <label htmlFor="password" className="sr-only">Password</label>
-
+        {signInForm.errors.password && signInForm.touched.password ? (
+                <div className='text-red-500 text-sm'>{signInForm.errors.password}</div>
+            ): null }
         <div className="relative">
           <input
             type="password"
+            id="password"
+                  onChange={signInForm.handleChange}
+                  value={signInForm.values.password}
             className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
             placeholder="Enter password"
           />
