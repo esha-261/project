@@ -2,7 +2,7 @@
  import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./navbar";
-import {Toaster} from 'react-hot-toast'
+import {Toaster,ToastBar} from 'react-hot-toast'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +28,19 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         <Toaster 
-        position="top-center"/>
+        position="top-center"
+        toastOptions={{
+          success: {
+            style: {
+              background: 'green',
+            },
+          },
+          error: {
+            style: {
+              background: 'red',
+            },
+          },
+        }}/>
         {children}
       </body>
     </html>

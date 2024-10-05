@@ -2,6 +2,7 @@
 import React from 'react'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
+import toast from 'react-hot-toast'
 
 const addlibrarySchema = Yup.object().shape({
   category: Yup.string()
@@ -54,6 +55,7 @@ const AddLibrary = () => {
     onSubmit:(values,{resetForm})=>{
       console.log(values)
       resetForm()
+      toast.success('Submitted successfully')
     },
     validationSchema:addlibrarySchema
   })
