@@ -2,6 +2,7 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import toast from 'react-hot-toast'
 
 const signInSchema=Yup.object().shape(
   {
@@ -31,6 +32,7 @@ const SignIn = () => {
         {
             console.log(values)
             resetForm()
+            toast.success('Submitted successfully')
         },
        validationSchema :signInSchema
     }

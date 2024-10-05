@@ -2,7 +2,7 @@
 import React from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-
+import toast from 'react-hot-toast'
 
 const contactSchema=Yup.object().shape(
     {
@@ -39,6 +39,7 @@ const ContactUs = () => {
             {
                 console.log(values)
                 resetForm()
+                toast.success('Submitted successfully')
             },
            validationSchema :contactSchema
         }
