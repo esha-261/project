@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'
 
 const addlibrarySchema = Yup.object().shape({
   category: Yup.string()
-  .min(3, 'Category must be at least 3 characters long')
+  .min(3, 'Category must be at least 4 characters long')
   .max(20, 'Category cannot exceed 20 characters')
   .matches(/^[A-Za-z\s]+$/, 'Category must contain only letters and spaces')
   .required('Category is required'),
