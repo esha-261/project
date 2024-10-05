@@ -297,7 +297,7 @@ const AddLibrary = () => {
               ):null}
               <input
                 //id="af-submit-project-url"
-                type="text"
+                type="Date"
                 className="py-2 px-3 pe-11 block w-full  bg-white border border-gray-300  border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 placeholder="createdAt.."
                 id="createdAt"
