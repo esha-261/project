@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         toastOptions={{
           success: {
             style: {
-              background: 'green',
+              background: '#54C392',
             },
           },
           error: {

@@ -11,7 +11,7 @@ const page = () => {
             <div>
               <img
                 className="rounded-xl mt-10"
-                src="https://i.pinimg.com/474x/4a/0a/39/4a0a39c5c5f0971a9131bddb213aaf25.jpg"
+                src="https://i.pinimg.com/originals/1c/a7/49/1ca74946ed770bb635e4de4711bd861f.gif"
                 alt="Features Image"
               />
             </div>
