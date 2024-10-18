@@ -1,5 +1,11 @@
-import React from 'react'
-const page = () => {
+// 'use client';
+import React from 'react';
+
+
+const Home = () => {
+
+  // useState
+
   return (
     <div>
       <>
@@ -585,4 +591,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Home

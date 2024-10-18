@@ -1,8 +1,7 @@
- 'use client'
- import localFont from "next/font/local";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./navbar";
-import {Toaster,ToastBar} from 'react-hot-toast'
+// import {Toaster,ToastBar} from 'react-hot-toast'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,7 +26,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <Toaster 
+        {/* <Toaster 
         position="top-center"
         toastOptions={{
           success: {
@@ -40,7 +39,7 @@ export default function RootLayout({ children }) {
               background: 'red',
             },
           },
-        }}/>
+        }}/> */}
         {children}
       </body>
     </html>
