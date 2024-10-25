@@ -55,7 +55,7 @@ const Navbar = () => {
 
 
                     <a href="/about" className="text-black hover:text-white transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-blue-400">About</a>
-                    <a href="/contact" className="text-black hover:text-white transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-blue-400">Contact</a>
+                    <a href="/contactUs" className="text-black hover:text-white transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-blue-400">Contact</a>
                     <a href="/signIn" className="text-white hover:text-black transition-colors duration-300 px-3 py-2 rounded-lg border bg-gradient-to-tr from-blue-500 to-cyan-300  ">Sign In</a>
                 </div>
 
